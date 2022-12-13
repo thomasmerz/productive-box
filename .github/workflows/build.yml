@@ -12,9 +12,15 @@ jobs:
       matrix:
         node_version: [16]
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v3
+=======
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@master
+>>>>>>> 3201c2b (🩹 Issue 74: fix deprecation warning:)
         with:
           node-version: ${{ matrix.node_version }}
       - name: build
