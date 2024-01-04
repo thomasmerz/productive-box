@@ -12,7 +12,13 @@ jobs:
     steps:
       - name: Update gist
         uses: maxam2017/productive-box@master
+        # https://stackoverflow.com/a/58800550
+        # If you want to checkout a different branch you can specify with parameters on the checkout action.
+        # This workflow will checkout the last commit on the some-branch branch.
+        # with:
+        # ref: some-branch
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 3b6ecf2621f492632018912a61025276
           TIMEZONE: Europe/Berlin
+
